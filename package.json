@@ -1,0 +1,31 @@
+{
+  "name": "ntnututor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kai2june/ntnuTutor.git"
+  },
+  "author": "kai2june",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kai2june/ntnuTutor/issues"
+  },
+  "homepage": "https://github.com/kai2june/ntnuTutor#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1"
+  }
+}
