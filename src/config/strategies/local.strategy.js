@@ -11,19 +11,19 @@ module.exports = function(){
         mongodb.connect(url, function(err,db){
             var collection = db.collection('users');
             collection.findOne({userName: userName},
-                function(err,results){
+                function (err, results) {
                     if(!results) {
                         console.log('No this user');
                         done(null, false, {message: 'No this user'});
                     }
-                    else if(results.password === password){
+                    else if (results.password === password) {
                         var user = results;
-                        done(null,results);
+                        done(null, results);
                     }
-                    else{
+                    else {
                         done(null, false, {message: 'Bad password'});
                     }
-            });
+                });
         });
     }));
 };
