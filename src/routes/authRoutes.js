@@ -6,10 +6,10 @@ const mysql = require('mysql');
 var router = function(){
 
     const con = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'toor',
-        database: 'ntnuTutor'
+        host: "us-cdbr-iron-east-05.cleardb.net",
+        user: "bf21490598786b",
+        password: "9ce3bbcf",
+        database: "heroku_0825199c0f3d37a"
     });
     con.connect( (err) => {
         if(err) throw err;
@@ -30,10 +30,10 @@ var router = function(){
     authRouter.route('/signUp')
         .post(function(req,res){
             const con = mysql.createConnection({
-                host: 'localhost',
-                user: 'root',
-                password: 'toor',
-                database: 'ntnuTutor'
+                host: "us-cdbr-iron-east-05.cleardb.net",
+                user: "bf21490598786b",
+                password: "9ce3bbcf",
+                database: "heroku_0825199c0f3d37a"
             });
             con.connect( (err) => {
                 if(err) throw err;

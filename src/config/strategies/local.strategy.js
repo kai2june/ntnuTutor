@@ -8,17 +8,17 @@ module.exports = function (){
         passwordField: 'password'
     }, (userName, password, done) => {
         const con = mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: 'toor',
-            database: 'ntnuTutor'
+            host: "us-cdbr-iron-east-05.cleardb.net",
+            user: "bf21490598786b",
+            password: "9ce3bbcf",
+            database: "heroku_0825199c0f3d37a"
         });
         con.connect( (err) => {
             if(err)
                 throw err;
             else{
                 console.log('mysql connected!!');
-                let sql = `SELECT * FROM ntnuTutor.users WHERE userName = '${userName}'`;
+                let sql = `SELECT * FROM users WHERE userName = '${userName}'`;
                 con.query(sql, (err, result) => {
                     if(err) throw err;
                     else{
