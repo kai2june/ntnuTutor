@@ -8,11 +8,13 @@ var router = function(){
             if(!req.user) {
                 res.redirect('/');
             }
-            next();
+            else{
+                next();
+            }
         })
         .get(function(req,res){
             res.send('You are a valid user.');
-        })
+        });
 
     return studentRouter;
 };

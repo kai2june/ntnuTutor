@@ -3,10 +3,29 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var passport = require('passport');
-
+var mysql = require('mysql');
 var port = process.env.PORT || 3000;
 var app = express();
 
+const con = mysql.createConnection({
+    host: 'localhost',
+    user: 'root', 
+    password: 'toor'
+});
+con.connect( (err) => {
+    if(err) throw err;
+    else{
+        console.log('Create database now');
+        let sql = "CREATE DATABASE IF NOT EXISTS ntnuTutor";
+        con.query(sql, (err, result) => {
+            if(err) throw err;
+            else{
+                console.log('I create ntnuTutor');
+            }
+        });
+        con.end();
+    } 
+});
 
 app.use(express.static('public'));
 app.use(bodyParser.json());

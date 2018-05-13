@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +29,8 @@
     "jscs": "^3.0.7",
     "jshint": "^2.9.5",
     "mongodb": "^2.2.35",
+    "mysql": "^2.15.0",
+    "nodemon": "^1.17.4",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "xml2js": "^0.4.15"
