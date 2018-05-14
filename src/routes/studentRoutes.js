@@ -13,7 +13,8 @@ var router = function(){
             }
         })
         .get(function(req,res){
-            res.send('You are a valid user.');
+            res.send('You login with either local account or google account');
+            //res.render('students', {user: {name: req.user.displayName, image: req.user._json.image.url}});
         });
 
     return studentRouter;
