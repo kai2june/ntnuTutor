@@ -18,7 +18,7 @@ module.exports = function (){
                 throw err;
             else{
                 console.log('mysql connected!!');
-                let sql = `SELECT * FROM users WHERE userName = '${userName}'`;
+                let sql = `SELECT * FROM backendStaff WHERE userName = '${userName}'`;
                 con.query(sql, (err, result) => {
                     if(err) throw err;
                     else{

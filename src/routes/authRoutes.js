@@ -15,11 +15,11 @@ var router = function(){
         if(err) throw err;
         else{
             console.log('mysql connected!!');
-            let sql = "CREATE TABLE IF NOT EXISTS users (userName VARCHAR(255), password VARCHAR(255), id INT AUTO_INCREMENT PRIMARY KEY)";
+            let sql = "CREATE TABLE IF NOT EXISTS backendStaff (userName VARCHAR(255), password VARCHAR(255), id INT AUTO_INCREMENT PRIMARY KEY)";
             con.query(sql, (err, result) => {
                 if(err) throw err;
                 else{
-                    console.log('I create table users');
+                    console.log('I create table backendStaff');
                 }
             });
             con.end();
@@ -39,7 +39,7 @@ var router = function(){
                 if(err) throw err;
                 else{
                     console.log('Connected in signUp');
-                    let sql = `INSERT INTO users (userName, password) VALUES ('${req.body.userName}', '${req.body.password}')`;
+                    let sql = `INSERT INTO backendStaff (userName, password) VALUES ('${req.body.userName}', '${req.body.password}')`;
                     con.query(sql, (err,result) => {
                         if(err) throw err;
                         else{
